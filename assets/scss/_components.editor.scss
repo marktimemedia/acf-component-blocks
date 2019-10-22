@@ -1,0 +1,30 @@
+.editor-styles-wrapper {
+  .acf-input {
+    ul {
+      margin: inherit;
+      padding: inherit;
+    }
+
+    .acf-radio-list {
+      li {
+
+        label {
+          padding: .5em;
+          border: 1px solid #ddd;
+
+          &:hover, &:focus {
+            background-color: #ddd;
+          }
+        }
+
+        .selected {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+
+  figure {
+    margin: 0;
+  }
+}

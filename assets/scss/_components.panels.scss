@@ -1,0 +1,451 @@
+/* Some General Resets */
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/* General Panel Rules */
+.mtm-per-row-2 {
+	@include pinkmagic( $rowitems: 2, $padside: 4% );
+}
+
+.mtm-per-row-3 {
+	@include pinkmagic( $rowitems: 3, $padside: 4% );
+}
+
+.mtm-per-row-4 {
+	@include pinkmagic( $rowitems: 4, $padside: 4% );
+}
+
+.mtm-per-row-5 {
+	@include pinkmagic( $rowitems: 5, $padside: 4% );
+}
+
+.mtm-per-row-6 {
+	@include pinkmagic( $rowitems: 6, $padside: 4% );
+}
+
+.mtm-per-row-7 {
+	@include pinkmagic( $rowitems: 7, $padside: 3% );
+}
+
+.mtm-per-row-8 {
+	@include pinkmagic( $rowitems: 8, $padside: 3% );
+}
+
+.mtm-per-row-9 {
+	@include pinkmagic( $rowitems: 9, $padside: 3% );
+}
+
+.mtm-per-row-10 {
+	@include pinkmagic( $rowitems: 10, $padside: 3% );
+}
+
+.mtm-per-row-11 {
+	@include pinkmagic( $rowitems: 11, $padside: 3% );
+}
+
+.mtm-per-row-12 {
+	@include pinkmagic( $rowitems: 12, $padside: 3% );
+}
+
+.content--inner {
+		margin: 0 auto;
+  }
+
+  .alignfull, .alignwide {
+		.content--inner {
+	    padding-left: 2rem; // for a boxed width background with no sidebar
+	    padding-right: 2rem; // for a boxed width background with no sidebar
+	  }
+	}
+
+.mtm-component {
+	border-bottom: 1px solid #eee;
+	margin-top: -2rem;
+	padding-top: 2rem;
+	position: relative;
+
+	.content--page {
+		padding: $sm-pad;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+}
+	.mtm-component--main-full {
+		overflow: auto;
+		position: relative;
+	}
+
+	.mtm-component--home {
+		background-size: cover;
+		border-top: 1px solid #eee;
+		margin-top: 0;
+		padding-top: 0;
+		text-align: center;
+	}
+
+	.mtm-component--term-list {
+		padding: 1em 0;
+		margin: 0;
+
+		li {
+			list-style: none;
+			display: inline-block;
+		}
+
+		a {
+			padding-right: .5em;
+		}
+	}
+
+
+/* Module Rules */
+
+.mtm-module {
+	padding-bottom: 1em;
+	padding-top: 1em;
+	overflow: auto; // to account for floats inside the modules
+}
+
+		.mtm-module--hero-title {
+			margin: .75em auto;
+		}
+
+		.mtm-module--hero-subtitle {
+			margin-bottom: .75em;
+		}
+
+	.mtm-hero-image {
+		padding: 2em;
+		background-size:cover;
+		background-position: center center;
+		text-align: center;
+	}
+
+		.mtm-hero-image-title, .mtm-hero-image-subtitle p, .mtm-module--slider-title, .mtm-module--slider-subtitle p {
+			color: #fff;
+		}
+
+	.mtm-module--slider-slide {
+		background-size:cover;
+		background-position: center center;
+		text-align: center;
+	}
+		.mtm-module--slider-link {
+			display: block;
+			padding: 2em;
+		}
+
+	.mtm-logo-grid {
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	.mtm_module_call_to_action {
+		padding: 1em;
+		background: #f2f2f2;
+	}
+
+	.mtm-module--content-secondary-image {
+		padding: 1em;
+
+		.mtm-module--content-secondary-wrapper {
+			background-color: rgba(0,0,0,.5);
+			color: #fff;
+			padding: 1em;
+		}
+	}
+
+	.mtm-module--gallery {
+		display: flex;
+		flex-flow: row wrap;
+
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		// grid for supported browsers
+		@supports(display: grid) {
+			display: grid;
+			grid-auto-rows: minmax(20vh, $gallery-height);
+			grid-gap: 0.2em;
+			grid-template-columns: repeat(auto-fill, minmax($gallery-width, 1fr));
+		}
+
+		a {
+			// flex fallback
+			flex: 1 0 auto;
+			min-height: $gallery-height;
+			min-width: $gallery-width;
+			margin: ($gallery-gutter/2);
+
+			@supports(display: grid) {
+				margin: 0;
+			}
+		}
+
+	}
+		.mtm-module--gallery-image {
+			height: 100%;
+			line-height: 1;
+			margin: 0;
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+
+			figure {
+				background-size: cover;
+				background-position: center center;
+				height: 100%;
+				-webkit-transition:all .5s;
+				transition:all .5s;
+				width: 100%;
+
+				&:hover, &:focus {
+					transform: scale(1.2);
+				}
+			}
+		}
+
+		.mtm-module--gallery-caption {
+			background-color: rgba(0,0,0,.3);
+			bottom: 0;
+			color: #fff;
+			margin: 0;
+			padding: .25em;
+			position: absolute;
+			width: 100%;
+		}
+
+
+/* Home Rules */
+
+.mtm-home-news--content, .mtm-home-featured--story {
+	text-align:left;
+}
+
+.mtm-home-featured--single, .mtm-home-topic--single {
+	margin-bottom: 2%;
+}
+
+.mtm-home-sidebar--widget {
+	display: none;
+}
+
+/* Button Rules */
+.mtm-home-buttons {
+	margin-bottom: 1em;
+}
+
+.button.mtm-button {
+	display:inline-block;
+	margin-bottom: .5em;
+}
+
+.post-edit-link {
+	font-size: .7em;
+}
+
+/* List Rules */
+
+.mtm-list--single {
+	margin: 1em 0;
+	border-bottom: 1px solid rgba(150,150,150, 0.3);
+}
+
+	.mtm-list--image {
+		width: 100%;
+	}
+
+	.mtm-list--post-content {
+		width: 100%;
+}
+
+
+/* Tab Rules */
+
+.mtm-tabs--title-container {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+	.mtm-tabs--title {
+		cursor: pointer;
+		padding: .2em 0;
+
+		&.current {
+			font-weight: bold;
+		}
+	}
+
+	.mtm-tabs--title-accordion {
+		border-top: 1px solid #eee;
+	}
+
+.mtm-tabs--content {
+	display: none;
+	padding: .5em 0;
+
+	&.current {
+		display:inherit;
+	}
+}
+
+
+@media only screen and ( min-width:$med-bp ) {
+
+	.mtm-tabs--title-container {
+		display: block;
+	}
+		.mtm-tabs--title {
+			padding: .3em 0;
+			margin-right:1em;
+			display:inline-block;
+		}
+		.mtm-tabs--title-accordion {
+			display: none;
+		}
+		.mtm-tabs--content {
+			border-top: 1px solid #eee;
+		}
+
+	.mtm-module--cta-subheading{
+		display: inline-block;
+		margin-right: 1em;
+	}
+
+	.mtm-module--cta-buttons {
+		display: inline-block;
+	}
+}
+
+/* MEDIA QUERIES */
+
+
+@media only screen and ( min-width: $sm-bp ) and ( max-width: $med-bp ) {
+
+	.mtm-list--image {
+		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 6, $padtop: 0, $padside: $defaultpad );
+		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
+	}
+
+
+}
+
+@media only screen and ( min-width: $med-bp ) and ( max-width: $lg-bp ) {
+
+	.mtm-list--image {
+		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 5, $padtop: 0, $padside: $defaultpad );
+		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
+	}
+
+	.mtm-list--post-content {
+		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 7, $padtop: 0, $padside: 2% );
+		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
+	}
+
+	.mtm-home-news--content {
+		@include pinkgrid( $colspan: 6 );
+		@include pinkrow( $rowitems: 2 );
+
+		&.full {
+			@include pinkgrid( $colspan: 12 );
+			@include pinkrow( $rowitems: 1 );
+
+			.mtm-home-sidebar--widget {
+				@include pinkgrid( $colspan: 4 );
+				@include pinkrow( $rowitems: 3 );
+				margin: 1.5em 0;
+			}
+		}
+	}
+
+	.mtm-home-featured--story {
+		@include pinkgrid( $colspan: 6 );
+		@include pinkrow( $rowitems: 2 );
+	}
+
+}
+
+@media only screen and ( min-width: $med-bp ) {
+	.mtm-component .content--page {
+		padding: $big-pad;
+	}
+
+	.alignfull, .alignwide {
+		.content--inner {
+	    padding-left: $big-pad; // for a boxed width background with no sidebar
+	    padding-right: $big-pad; // for a boxed width background with no sidebar
+	  }
+	}
+
+	.mtm-home-sidebar--widget {
+		display: block;
+
+		&:first-of-type {
+			margin-top: 1.5em;
+		}
+	}
+
+	.mtm_module_dual_content_area {
+		.mtm-module--content-primary, .mtm-module--content-secondary {
+			@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 6, $padtop: 0, $padside: 5% );
+			@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
+		}
+	}
+
+	.mtm_module_content_callout {
+		.mtm-module--content-primary {
+			@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 8, $padtop: 0, $padside: 5% );
+			@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
+		}
+
+		.mtm-module--content-secondary {
+			@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 4, $padtop: 0, $padside: 5% );
+			@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
+		}
+	}
+
+}
+
+
+@media only screen and ( min-width: $lg-bp ) {
+
+	.mtm-list--image {
+		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 3, $padtop: 0, $padside: $defaultpad );
+		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
+	}
+
+	.mtm-list--post-content {
+		@include pinkgrid( $align: top, $totalcols: $defaultcols, $colspan: 9, $padtop: 0, $padside: $defaultpad );
+		@include pinkrow( $rowitems: 2, $before: 0, $after: 0 )
+	}
+
+	.mtm-home-news--content {
+		@include pinkgrid( $colspan: 4 );
+		@include pinkrow( $rowitems: 2 );
+
+		&.full {
+			@include pinkgrid( $colspan: 12 );
+			@include pinkrow( $rowitems: 1 );
+
+			.mtm-home-sidebar--widget {
+				@include pinkgrid( $colspan: 4 );
+				@include pinkrow( $rowitems: 3 );
+				margin: 1.5em 0;
+			}
+		}
+	}
+
+	.mtm-home-featured--story {
+		@include pinkgrid( $colspan: 8 );
+		@include pinkrow( $rowitems: 2 );
+	}
+
+}
