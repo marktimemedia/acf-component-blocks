@@ -1,4 +1,4 @@
-#ACF Block Components for WordPress
+# ACF Block Components for WordPress
 
 ACF Blocks plugin for WordPress for displaying custom content within pages and posts. **Requires [Advanced Custom Fields Pro](http://advancedcustomfields.com/pro), [ACF Term and Taxonomy Chooser](https://github.com/marktimemedia/acf-term-and-taxonomy-chooser), [ACF Post Type Selector](https://github.com/TimPerry/acf-post-type-selector) and [ACF Widget Area Field](https://wordpress.org/plugins/advanced-custom-fields-widget-area-field/)**.
 
