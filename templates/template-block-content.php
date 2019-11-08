@@ -14,7 +14,9 @@ mtm_load_wrap_header(); ?>
 
 	<?php endif; ?>
 
-	<?php the_content(); ?>
+	<?php while ( have_posts() ) : the_post();
+		the_content();
+	endwhile; ?>
 
 </section>
 

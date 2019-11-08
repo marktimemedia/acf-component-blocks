@@ -45,7 +45,7 @@ class Mtm_Block_Field_Groups extends Mtm_Block_Field_Definitions {
 
 		return apply_filters( 'mtm_template_block_content', array(
 			'key' => $key,
-			'title' => 'Content Modules',
+			'title' => 'Page Options',
 			'fields' => array(
 				$this->mtm_block_show_page_title(),
 			),
