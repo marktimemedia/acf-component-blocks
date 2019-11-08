@@ -24,7 +24,8 @@ Works with most standard WordPress themes.
 14. Tabs
 15. Gallery (using WordPress Gallery)
 
-
+### Page Templates (block templates coming soon, once WordPress supports them)
+1. Custom Block Template (adds ability to hide or show the main page title)
 
 ### Vague Description of How To Use
 1. Install and activate the plugin

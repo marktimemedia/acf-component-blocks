@@ -8,5 +8,8 @@
     background-color: #ddd; }
 .editor-styles-wrapper .acf-input .acf-radio-list li .selected {
   background-color: #ddd; }
+.editor-styles-wrapper .acf-input .acf-radio-list li input[type="radio"] {
+  display: inline-block;
+  visibility: visible; }
 .editor-styles-wrapper figure {
   margin: 0; }

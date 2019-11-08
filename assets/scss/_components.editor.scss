@@ -20,6 +20,11 @@
         .selected {
           background-color: #ddd;
         }
+
+        input[type="radio"] {
+          display: inline-block;
+          visibility: visible;
+        } 
       }
     }
   }

@@ -3,7 +3,7 @@
 	Plugin Name: ACF Block Components
 	Description: Custom Blocks
 	Author: Marktime Media
-	Version: 1.0
+	Version: 1.1
 	Author URI: http://www.marktimemedia.com
  */
 
@@ -12,10 +12,12 @@ define( 'MTM_BLOCK_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/class-mtm-field-definitions.php' );
 require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/class-mtm-field-groups.php' );
 require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/mtm-acf-fields.php' );
+require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/class-mtm-block-template.php' );
 require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/class-gamajo-template-loader.php' );
 require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/class-mtm-template-loader.php' );
 require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/class-tgm-plugin-activation.php' );
 require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/mtm-acf-check-functions.php' );
+require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/mtm-acf-plugin-templates.php' );
 require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/mtm-acf-plugin-requirements.php' );
 require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/mtm-helpers.php' );
 require_once( MTM_BLOCK_PLUGIN_DIR . 'lib/mtm-config.php' );
@@ -52,5 +54,8 @@ function mtm_block_components_admin_scripts() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'mtm_block_components_admin_scripts',10,0 );
+
+// Add Templates
+add_action( 'plugins_loaded', array( 'Mtm_Block_Templates', 'get_instance' ) );
 
 ?>

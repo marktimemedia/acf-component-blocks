@@ -2909,4 +2909,24 @@ class Mtm_Block_Field_Definitions {
 		));
 	}
 
+	// Show Page Title?
+	public static function mtm_block_show_page_title( $label = 'Show Page Title?' ) {
+		return apply_filters( 'mtm_block_show_page_title_filter', array(
+			'key' => 'field_570c0e236b517block',
+			'label' => $label,
+			'name' => 'mtm_block_show_page_title',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => 'Yes, show the page title at the top of the page (unchecking this will hide the page title)',
+			'default_value' => 0,
+		));
+	}
+
 } // END class
