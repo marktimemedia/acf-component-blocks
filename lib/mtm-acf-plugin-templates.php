@@ -20,6 +20,7 @@ function acf_location_rules_values_blocktemplates( $choices )
 
 	$templates = array(
                         'Custom Block Template' => '../templates/template-block-content.php',
+                        'Single Scroll Template' => '../templates/template-single-scroll.php'
                     );
 
 	foreach( $templates as $k => $v ) {

@@ -48,6 +48,7 @@ class Mtm_Acf_Add_Local_Block_Field_Groups extends Mtm_Block_Field_Groups {
 			acf_add_local_field_group( $this->mtm_block_gallery() );
 
 			acf_add_local_field_group( $this->mtm_template_block_content() );
+			acf_add_local_field_group( $this->mtm_template_block_single_scroll() );
 		}
 	}
 } // END class

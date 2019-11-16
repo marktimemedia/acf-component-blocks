@@ -7,6 +7,41 @@
  **/
 class Mtm_Block_Field_Definitions {
 
+	// single scroll page select
+	public function mtm_block_single_scroll_page_select( $label = 'Select Single Scroll Pages' ){
+
+		return apply_filters( 'mtm_block_single_scroll_page_select_filter', array(
+			'key' => 'field_565e2fa2c08cbblock',
+			'label' => $label,
+			'name' => 'mtm_select_pages',
+			'type' => 'relationship',
+			'instructions' => 'Select and re-order other pages, which will display in sections below the main content on this page.',
+			'required' => 0,
+			'conditional_logic' => '',
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array(
+				0 => 'page',
+			),
+			'taxonomy' => array(
+			),
+			'filters' => array(
+				0 => 'search',
+				1 => 'post_type',
+				2 => 'taxonomy',
+			),
+			'elements' => array(
+				0 => 'featured_image',
+			),
+			'min' => '',
+			'max' => '',
+			'return_format' => 'object',
+		));
+	}
+
 	// Single Content Area
 	public function mtm_block_single_content_area( $label = 'Single Content Block' ) {
 		return apply_filters( 'mtm_block_single_content_area_filter', array(

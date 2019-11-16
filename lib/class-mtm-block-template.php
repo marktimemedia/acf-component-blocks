@@ -90,6 +90,7 @@ if ( ! class_exists( 'Mtm_Block_Templates' ) )  {
                     //'FILE_PATH_AND_NAME'     => 'TEMPLATE_TITLE'
                     $this->templates = array(
                             '../templates/template-block-content.php' => 'Custom Block Template',
+                            '../templates/template-single-scroll.php' => 'Single Scroll Template',
                     );
 
             }

@@ -379,3 +379,44 @@ if( !function_exists( 'mtm_check_all_user_posts' ) ) {
       return $count;
   }
 }
+
+
+/**
+* Outputs the post thumbnail with fallback for the first inline image, then the default image
+*/
+if( !function_exists( 'the_mtm_post_thumbnail_inline' ) ) {
+	function the_mtm_post_thumbnail_inline( $post_ID = '',  $size = 'full', $class = '', $link = true, $attr ='' ) {
+
+		$attachments = get_children( 'post_parent='. $post_ID .'&post_type=attachment&post_mime_type=image' );
+
+		if ( false !== mtm_acf_check() ) {
+
+			if ( has_post_thumbnail() ) { // is there a post thumbnail?
+
+				if( $link ) { ?> <a href="<?php the_permalink(); ?>"> <?php } ?>
+					<figure class="post--thumbnail <?php echo $class; ?>"> <?php the_post_thumbnail( $size, $attr ); ?> </figure>
+				<?php if( $link ) { ?> </a> <?php }
+
+			} elseif ( $attachments ) { // is there an inline image?
+
+				$keys = array_reverse( array_keys ( $attachments ) );
+				$image = wp_get_attachment_image( $keys[0], $size, true );
+
+				if( $link ) { ?> <a href="<?php the_permalink(); ?>"> <?php } ?>
+					<figure class="post--thumbnail <?php echo $class; ?>"> <?php echo $image; ?> </figure>
+				<?php if( $link ) { ?> </a> <?php }
+
+
+			} elseif ( get_field( 'mtm_default_featured_image', 'option' ) ) { // make sure field value exists
+
+				$image = get_field( 'mtm_default_featured_image', 'option' );
+				$thumb = $image['sizes'][ $size ];
+				$alt = $image['alt'];
+
+				if( $link ) { ?> <a href="<?php the_permalink(); ?>"> <?php } ?>
+					<figure class="post--thumbnail default-thumbnail <?php echo $class; ?>"><img src="<?php echo esc_url( $thumb ); ?>" alt="<?php echo esc_html( $alt ); ?>" /></figure>
+				<?php if( $link ) { ?> </a> <?php }
+			}
+		}
+	}
+}

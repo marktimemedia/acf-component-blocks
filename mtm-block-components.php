@@ -3,7 +3,7 @@
 	Plugin Name: ACF Block Components
 	Description: Custom Blocks
 	Author: Marktime Media
-	Version: 1.1
+	Version: 1.2
 	Author URI: http://www.marktimemedia.com
  */
 

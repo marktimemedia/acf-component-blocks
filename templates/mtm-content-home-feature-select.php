@@ -5,9 +5,7 @@ global $mtm_home_feature_count;
 <div class="mtm-home-featured--single <?php echo mtm_count_classes( $mtm_home_feature_count ) ?>">
 	<div class="mtm-home-featured--single-content">
 
-		<a href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail( 'medium_large', array('class' => 'mtm-home-featured--image') ); ?>
-		</a>
+		<?php the_mtm_post_thumbnail_inline( $post->ID, 'medium_large', 'mtm-home-featured--image' ); ?>
 		<div class="mtm-home-featured--single-text">
 
 			<h3 class="mtm-home-featured--single-title"><a href="<?php the_permalink(); ?>">

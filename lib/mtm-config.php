@@ -20,3 +20,15 @@ if( !function_exists( 'mtm_plugin_options_page' ) ) {
       }
   }
 }
+
+
+/**
+* Remove the wpautop filter from the_content
+*/
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', function ($content) {
+	if (has_blocks()) {
+		return $content;
+	}
+    return wpautop($content);
+});
