@@ -7,13 +7,18 @@
 
     .acf-radio-list {
       li {
-
+        line-height: 33px;
         label {
           padding: .5em;
           border: 1px solid #ddd;
+          visibility: hidden;
 
           &:hover, &:focus {
             background-color: #ddd;
+          }
+
+          &:first-of-type {
+            visibility: visible;
           }
         }
 
@@ -24,7 +29,11 @@
         input[type="radio"] {
           display: inline-block;
           visibility: visible;
-        } 
+        }
+
+        input[type="text"] {
+          display: inline-block !important;
+        }
       }
     }
   }

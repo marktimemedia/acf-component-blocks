@@ -89,6 +89,21 @@ class Mtm_Block_Field_Definitions {
 					'toolbar' => 'full',
 					'media_upload' => 1,
 				),
+				array(
+					'key' => 'field_5dd188a07d1c9block1',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
 			),
 			'location' => array(
 				array(
@@ -176,8 +191,22 @@ class Mtm_Block_Field_Definitions {
 					'toolbar' => 'full',
 					'media_upload' => 1,
 				),
+				array(
+					'key' => 'field_5dd188a07d1c9block2',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
 			),
-
 			'location' => array(
 				array(
 					array(
@@ -286,6 +315,21 @@ class Mtm_Block_Field_Definitions {
 					'max_height' => '',
 					'max_size' => '',
 					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_5dd188a07d1c9block2',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
 				),
 			),
 
@@ -938,6 +982,21 @@ class Mtm_Block_Field_Definitions {
 					'disabled' => 0,
 				),
 				array(
+					'key' => 'field_5dd188a07d1c9block4',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
+				array(
 					'key' => 'field_56f579f9aaafcblock',
 					'label' => 'Add Featured Content Boxes',
 					'name' => 'mtm_home_featured_content_boxes',
@@ -1324,6 +1383,119 @@ class Mtm_Block_Field_Definitions {
 		));
 	}
 
+	// Buttons
+	public static function mtm_block_buttons( $label = 'Buttons' ) {
+		return apply_filters( 'mtm_block_buttons_filter', array(
+			'key' => '56f57f3e50ghjghkjblock',
+			'name' => 'mtm_module_buttons',
+			'label' => $label,
+			'display' => 'block',
+			'fields' => array(
+				array(
+					'key' => 'field_56f57fcddfgblock',
+					'label' => 'Add Buttons',
+					'name' => 'mtm_home_button_repeater',
+					'type' => 'repeater',
+					'instructions' => '(Optional) Click "Add Buttion" to add call to action buttons',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array (
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'collapsed' => '',
+					'min' => '',
+					'max' => '',
+					'layout' => 'block',
+					'button_label' => 'Add Button',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_56f57fe45gfhfghblock',
+							'label' => 'Button Label',
+							'name' => 'mtm_home_button_label',
+							'type' => 'text',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array (
+								'width' => 40,
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+						array(
+							'key' => 'field_57730a1achhfghblock',
+							'label' => 'Button Content Link',
+							'name' => 'mtm_post_content_link',
+							'type' => 'page_link',
+							'instructions' => 'Link your button to other content on your site',
+							'required' => '',
+							'conditional_logic' => '',
+							'wrapper' => array (
+								'width' => 30,
+								'class' => '',
+								'id' => '',
+							),
+							'post_type' => array(
+							),
+							'taxonomy' => array(
+							),
+							'allow_null' => 0,
+							'multiple' => 0,
+						),
+						array(
+							'key' => 'field_56f57ffbhfghblock',
+							'label' => 'Button Custom Link',
+							'name' => 'mtm_home_button_link',
+							'type' => 'text',
+							'instructions' => 'Link your button to a custom url or anchor tag (overrides Content Link)',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array (
+								'width' => 30,
+								'class' => '',
+								'id' => '',
+							),
+							'default_value' => '',
+							'placeholder' => '',
+							'prepend' => '',
+							'append' => '',
+							'maxlength' => '',
+							'readonly' => 0,
+							'disabled' => 0,
+						),
+					),
+				),
+			),
+
+			'location' => array(
+				array(
+					array(
+						'param' => 'block',
+						'operator' => '==',
+						'value' => 'acf/mtm-block-buttons',
+					),
+				),
+			),
+			'menu_order' => 0,
+			'position' => 'normal',
+			'style' => 'default',
+			'label_placement' => 'top',
+			'instruction_placement' => 'label',
+			'hide_on_screen' => '',
+			'active' => true,
+			'description' => ''
+		));
+	}
+
 	// Call To Action
 	public static function mtm_block_call_to_action( $label = 'Call To Action' ) {
 		return apply_filters( 'mtm_block_call_to_action_filter', array(
@@ -1454,6 +1626,21 @@ class Mtm_Block_Field_Definitions {
 						),
 					),
 				),
+				array(
+					'key' => 'field_5dd188a07d1c9block5',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
 			),
 
 			'location' => array(
@@ -1504,6 +1691,21 @@ class Mtm_Block_Field_Definitions {
 					'maxlength' => '',
 					'readonly' => 0,
 					'disabled' => 0,
+				),
+				array(
+					'key' => 'field_5dd188a07d1c9block6',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
 				),
 				array(
 					'key' => 'field_56f59494418f0block',
@@ -1658,6 +1860,21 @@ class Mtm_Block_Field_Definitions {
 					'allow_null' => 1,
 					'display_or_return' => 'return',
 				),
+				array(
+					'key' => 'field_5dd188a07d1c9block7',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
 			),
 
 			'location' => array(
@@ -1708,6 +1925,21 @@ class Mtm_Block_Field_Definitions {
 					'maxlength' => '',
 					'readonly' => 0,
 					'disabled' => 0,
+				),
+				array(
+					'key' => 'field_5dd188a07d1c9block8',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
 				),
 				array(
 					'key' => 'field_5728d666cf640block',
@@ -1923,6 +2155,21 @@ class Mtm_Block_Field_Definitions {
 					'disabled' => 0,
 				),
 				array(
+					'key' => 'field_5dd188a07d1c9block9',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
+				array(
 					'key' => 'field_576a88e224ba8block',
 					'label' => 'Add Grid Item',
 					'name' => 'mtm_add_list_item',
@@ -2111,6 +2358,21 @@ class Mtm_Block_Field_Definitions {
 					'maxlength' => '',
 					'readonly' => 0,
 					'disabled' => 0,
+				),
+				array(
+					'key' => 'field_5dd188a07d1c9block10',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
 				),
 				array(
 					'key' => 'field_5783de4c38885block',
@@ -2474,6 +2736,21 @@ class Mtm_Block_Field_Definitions {
 					'disabled' => 0,
 				),
 				array(
+					'key' => 'field_5dd188a07d1c9block11',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+				),
+				array(
 					'key' => 'field_5783de5e38892block',
 					'label' => 'Content Source',
 					'name' => 'mtm_list_archive_select',
@@ -2790,6 +3067,21 @@ class Mtm_Block_Field_Definitions {
 			'display' => 'block',
 			'fields' => array(
 				array(
+					array(
+						'key' => 'field_5dd188a07d1c9block12',
+						'label' => 'Background Color',
+						'name' => 'mtm_color_picker_background',
+						'type' => 'color_picker',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+					),
 					'key' => 'field_5a00b5bdf261bblock',
 					'label' => 'Add Tabs',
 					'name' => 'mtm_tab_repeater',
@@ -2896,6 +3188,21 @@ class Mtm_Block_Field_Definitions {
 					'maxlength' => '',
 					'readonly' => 0,
 					'disabled' => 0,
+				),
+				array(
+					'key' => 'field_5dd188a07d1c9block13',
+					'label' => 'Background Color',
+					'name' => 'mtm_color_picker_background',
+					'type' => 'color_picker',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
 				),
 				array(
 					'key' => 'field_5ae7871ca2605block',

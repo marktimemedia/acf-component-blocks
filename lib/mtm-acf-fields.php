@@ -37,6 +37,7 @@ class Mtm_Acf_Add_Local_Block_Field_Groups extends Mtm_Block_Field_Groups {
 			acf_add_local_field_group( $this->mtm_block_hero_media() );
 			acf_add_local_field_group( $this->mtm_block_slider() );
 			acf_add_local_field_group( $this->mtm_block_feature_boxes() );
+			acf_add_local_field_group( $this->mtm_block_buttons() );
 			acf_add_local_field_group( $this->mtm_block_call_to_action() );
 			acf_add_local_field_group( $this->mtm_block_logo_showcase() );
 			acf_add_local_field_group( $this->mtm_block_widget_area() );
@@ -123,6 +124,18 @@ add_filter( 'block_categories', 'mtm_block_category', 10, 2);
          'keywords'          => array( '' ),
 				 'mode' => 'auto',
      ));
+
+		 // Buttons
+ 		 acf_register_block_type(array(
+ 				 'name'              => 'mtm_block_buttons',
+ 				 'title'             => __('Multi Button Block'),
+ 				 'description'       => __('Display multiple buttons'),
+ 				 'render_template'   => MTM_BLOCK_PLUGIN_DIR . 'templates/mtm-wrapper-buttons.php',
+ 				 'category'          => 'custom-blocks',
+ 				 'icon'              => 'screenoptions',
+ 				 'keywords'          => array( '' ),
+ 				'mode' => 'auto',
+ 		 ));
 
 		 // Manual List
      acf_register_block_type(array(
@@ -261,12 +274,24 @@ add_filter( 'block_categories', 'mtm_block_category', 10, 2);
  				 'name'              => 'mtm_block_widget_area',
  				 'title'             => __('Widget Area Block'),
  				 'description'       => __('Display one of your custom widget areas'),
- 				 'render_template'   => MTM_BLOCK_PLUGIN_DIR . 'templates/mtm-wrapper-widget area.php',
+ 				 'render_template'   => MTM_BLOCK_PLUGIN_DIR . 'templates/mtm-wrapper-widget-area.php',
  				 'category'          => 'custom-blocks',
- 				 'icon'              => 'screenoptions',
+ 				 'icon'              => 'feedback',
  				 'keywords'          => array( '' ),
  				'mode' => 'auto',
  		 ));
+
+		 // TEST ONLY
+		 // acf_register_block_type(array(
+			// 	 'name'              => 'mtm_block_test',
+			// 	 'title'             => __('Test Block'),
+			// 	 'description'       => __('Test block for dev only'),
+			// 	 'render_template'   => MTM_BLOCK_PLUGIN_DIR . 'templates/mtm-wrapper-test.php',
+			// 	 'category'          => 'custom-blocks',
+			// 	 'icon'              => 'welcome-view-site',
+			// 	 'keywords'          => array( '' ),
+			// 	'mode' => 'auto',
+		 // ));
  }
 
  // Check if function exists and hook into setup.
@@ -332,6 +357,52 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-
+acf_add_local_field_group(array (
+	'key' => 'group_56831a6c39e46block',
+	'title' => 'Background Image',
+	'fields' => array(
+		array(
+			'key' => 'field_565cdb92e45d7block',
+			'label' => 'Add Background Image',
+			'name' => 'mtm_home_background_image',
+			'type' => 'image',
+			'instructions' => '(Optional) Add a background image to the homepage area',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+			'preview_size' => 'thumbnail',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'blocktemplates',
+				'operator' => '==',
+				'value' => '../templates/template-single-scroll.php',
+			),
+		),
+	),
+	'menu_order' => 100,
+	'position' => 'side',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
 
 endif;

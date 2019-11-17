@@ -1,15 +1,26 @@
 .editor-styles-wrapper .acf-input ul {
   margin: inherit;
   padding: inherit; }
-.editor-styles-wrapper .acf-input .acf-radio-list li label {
-  padding: .5em;
-  border: 1px solid #ddd; }
-  .editor-styles-wrapper .acf-input .acf-radio-list li label:hover, .editor-styles-wrapper .acf-input .acf-radio-list li label:focus {
+.editor-styles-wrapper .acf-input .acf-radio-list li {
+  line-height: 33px; }
+  .editor-styles-wrapper .acf-input .acf-radio-list li label {
+    padding: .5em;
+    border: 1px solid #ddd;
+    visibility: hidden; }
+    .editor-styles-wrapper .acf-input .acf-radio-list li label:hover, .editor-styles-wrapper .acf-input .acf-radio-list li label:focus {
+      background-color: #ddd; }
+    .editor-styles-wrapper .acf-input .acf-radio-list li label:first-of-type {
+      visibility: visible; }
+  .editor-styles-wrapper .acf-input .acf-radio-list li .selected {
     background-color: #ddd; }
-.editor-styles-wrapper .acf-input .acf-radio-list li .selected {
-  background-color: #ddd; }
-.editor-styles-wrapper .acf-input .acf-radio-list li input[type="radio"] {
-  display: inline-block;
-  visibility: visible; }
+  .editor-styles-wrapper .acf-input .acf-radio-list li input[type="radio"] {
+    display: inline-block;
+    visibility: visible; }
+  .editor-styles-wrapper .acf-input .acf-radio-list li input[type="text"] {
+    display: inline-block !important; }
 .editor-styles-wrapper figure {
   margin: 0; }
+.iris-border .iris-picker-inner {
+  left: 8px;
+  right: 8px;
+}

@@ -482,6 +482,8 @@
 /* Button Rules */
 .mtm-home-buttons {
   margin-bottom: 1em; }
+  .mtm-home-buttons p {
+    display: inline-block; }
 
 .button.mtm-button {
   display: inline-block;

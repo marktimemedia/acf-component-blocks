@@ -23,13 +23,18 @@ Works with most standard WordPress themes.
 13. Manual Grid
 14. Tabs
 15. Gallery (using WordPress Gallery)
+16. Multi-Buttons
 
 ### Page Templates (block templates coming soon, once WordPress supports them)
 1. Custom Block Template (adds ability to hide or show the main page title)
+2. Single Scroll Template (adds ability to output other pages below the main page, also background image)
 
 ### Vague Description of How To Use
 1. Install and activate the plugin
 2. Build posts and pages using Custom Blocks
+3. Supports regular, wide, and full alignment
+4. Several blocks have custom background colors
+4. Can filter custom ACF colors to match your theme by targeting `mtm_block_colors_filter`
 
 
 ### Vague Description of How To Theme

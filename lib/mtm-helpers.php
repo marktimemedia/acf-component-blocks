@@ -420,3 +420,46 @@ if( !function_exists( 'the_mtm_post_thumbnail_inline' ) ) {
 		}
 	}
 }
+
+/**
+* Outputs the color class (background or regular) from a given color field
+*/
+if ( !function_exists( 'mtm_color_picker_class' ) ) {
+  function mtm_color_picker_class( $color_field = '', $sub = false, $background = false ) {
+    // Get ACF Values from color picker
+    $mtm_acf_color_picker_values = $sub ? get_sub_field( $color_field ) : get_field( $color_field );
+
+    // Set array of color classes (for block editor) and hex codes (from ACF)
+    $mtm_block_colors = apply_filters( 'mtm_block_colors_filter', array(
+    	 // Change these to match your color class (gutenberg) and hex codes (acf)
+         "spring-color-1"   => "#de1e7e",
+         "spring-color-2"   => "#10aded",
+         "spring-color-3"   => "#10ca7e",
+         "spring-color-4"   => "#9155ed",
+         "white"            => "#ffffff",
+         "neutral-lightest" => "#f4f2f3",
+         "neutral-lighter"  => "#d4ccd4",
+         "neutral-light"    => "#afa8af",
+         "neutral-mid"      => "#948b90",
+         "neutral-dark"     => "#635d61",
+         "neutral-darker"   => "#464144",
+         "neutral-darkest"  => "#322e2f",
+    ));
+    $mtm_color_class = null;
+
+    if ( $mtm_acf_color_picker_values ) {
+      // Loop over colors array and set proper class if background color selection matches value
+      foreach( $mtm_block_colors as $key => $value ) {
+         if( $mtm_acf_color_picker_values == $value ) {
+            $mtm_color_class = $key;
+         }
+      }
+    }
+    if( $mtm_color_class ) {
+      $mtm_color_class_output  = $background ? 'has-'. $mtm_color_class . '-background-color' : 'has-'. $mtm_color_class . '-color';
+    } else {
+      $mtm_color_class_output  = $background ? 'has-no-background-color' : 'has-no-color';
+    }
+    return $mtm_color_class_output;
+  }
+}
