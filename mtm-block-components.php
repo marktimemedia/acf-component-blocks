@@ -1,9 +1,9 @@
 <?php
 /*
 	Plugin Name: ACF Block Components
-	Description: Custom Blocks
+	Description: Custom Blocks and Block Page Templates
 	Author: Marktime Media
-	Version: 1.3
+	Version: 1.3.1
 	Author URI: http://www.marktimemedia.com
  */
 

@@ -456,7 +456,7 @@ if ( !function_exists( 'mtm_color_picker_class' ) ) {
       }
     }
     if( $mtm_color_class ) {
-      $mtm_color_class_output  = $background ? 'has-'. $mtm_color_class . '-background-color' : 'has-'. $mtm_color_class . '-color';
+      $mtm_color_class_output  = $background ? 'has-custom-background-color has-'. $mtm_color_class . '-background-color' : 'has-custom-color has-'. $mtm_color_class . '-color';
     } else {
       $mtm_color_class_output  = $background ? 'has-no-background-color' : 'has-no-color';
     }
