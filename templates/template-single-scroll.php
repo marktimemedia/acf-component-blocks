@@ -3,7 +3,9 @@
 Template Name: Single Scroll Page
 */
 
-mtm_load_wrap_header(); ?>
+mtm_load_wrap_header();
+$jump = get_field('mtm_enable_jump_button') ? true : false; ?>
+
 <section class="mtm-component mtm-component--home home-standard single-scroll-main" style="background-image:url('<?php echo esc_url( mtm_acf_image_property( 'mtm_home_background_image', 'url' ) ); ?>')">
 	<section class="content--page">
 
@@ -38,6 +40,8 @@ if( $scroll_posts ):
 			<section class="content--<?php echo $post->post_name; ?>">
 
 				<div class="content--page">
+
+					<?php if( $jump ) { mtm_get_block_part('mtm-block', 'jump-button'); } ?>
 
 					<?php if( false !== get_field('mtm_block_show_page_title') ) : ?>
 

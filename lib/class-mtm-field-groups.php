@@ -86,6 +86,7 @@ class Mtm_Block_Field_Groups extends Mtm_Block_Field_Definitions {
 			'title' => $label,
 			'fields' => array(
 					$this->mtm_block_show_page_title(),
+					$this->mtm_enable_jump_button(),
 					$this->mtm_block_single_scroll_page_select(),
 			),
 			'location' => array( $location ),

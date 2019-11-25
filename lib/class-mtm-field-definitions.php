@@ -3271,4 +3271,24 @@ class Mtm_Block_Field_Definitions {
 		));
 	}
 
+	// Show Jump Button?
+	public static function mtm_enable_jump_button( $label = 'Enable Back To Top?' ) {
+		return apply_filters( 'mtm_enable_jump_button_filter', array(
+			'key' => 'field_84gfkd945yd058block',
+			'label' => $label,
+			'name' => 'mtm_enable_jump_button',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => 'Yes, show a back to top button in all single scroll sections (unchecking this will hide the button)',
+			'default_value' => 0,
+		));
+	}
+
 } // END class

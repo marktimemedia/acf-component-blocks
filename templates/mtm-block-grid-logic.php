@@ -144,7 +144,7 @@ if( 'Pick From Taxonomy' == get_field( 'mtm_list_archive_select' ) ) : // Taxono
 
 			<?php while( have_rows( 'mtm_add_list_item' ) ): the_row(); // Loop through each itemm
 
-				mtm_get_block_part( 'mtm-content', 'grid-module' );
+				mtm_get_block_part( 'mtm-content', 'grid-manual' );
 
 			endwhile; ?>
 

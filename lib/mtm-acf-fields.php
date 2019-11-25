@@ -50,6 +50,7 @@ class Mtm_Acf_Add_Local_Block_Field_Groups extends Mtm_Block_Field_Groups {
 
 			acf_add_local_field_group( $this->mtm_template_block_content() );
 			acf_add_local_field_group( $this->mtm_template_block_single_scroll() );
+			acf_add_local_field_group( $this->mtm_enable_jump_button() );
 		}
 	}
 } // END class
@@ -277,6 +278,18 @@ add_filter( 'block_categories', 'mtm_block_category', 10, 2);
  				 'render_template'   => MTM_BLOCK_PLUGIN_DIR . 'templates/mtm-wrapper-widget-area.php',
  				 'category'          => 'custom-blocks',
  				 'icon'              => 'feedback',
+ 				 'keywords'          => array( '' ),
+ 				'mode' => 'auto',
+ 		 ));
+
+		 // Widget Area
+ 		 acf_register_block_type(array(
+ 				 'name'              => 'mtm_block_jump_button',
+ 				 'title'             => __('Back To Top Block'),
+ 				 'description'       => __('Display a simple "back to top" button'),
+ 				 'render_template'   => MTM_BLOCK_PLUGIN_DIR . 'templates/mtm-block-jump-button.php',
+ 				 'category'          => 'custom-blocks',
+ 				 'icon'              => 'arrow-up-alt',
  				 'keywords'          => array( '' ),
  				'mode' => 'auto',
  		 ));
