@@ -428,6 +428,8 @@
   list-style: none;
   margin: 0;
   padding: 0; }
+  .mtm-module--gallery > p, .mtm-module--gallery a > p {
+    display: none; }
   @supports (display: grid) {
     .mtm-module--gallery {
       display: grid;
@@ -521,7 +523,9 @@
 
 .mtm-tabs--content {
   display: none;
-  padding: .5em 0; }
+  padding: .5em 0;
+  clear: both;
+  overflow: auto; }
   .mtm-tabs--content.current {
     display: inherit; }
 
@@ -542,7 +546,9 @@
 
   .mtm-module--cta-subheading {
     display: inline-block;
-    margin-right: 1em; }
+    margin-right: 1em;
+    line-height: 1.4;
+    margin-bottom: 0.5em; }
 
   .mtm-module--cta-buttons {
     display: inline-block; } }

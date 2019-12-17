@@ -9,7 +9,7 @@ if( !empty($block['align']) ) {
 }
 ?>
 
-<div class="<?php echo esc_attr($className); ?>" id="<?php echo( esc_html( $anchor ) ); ?>">
+<div class="<?php echo esc_attr($className); ?>" id="<?php echo( esc_html( $anchor ) ); ?>" style="background-color:<?php the_field('mtm_color_picker_background'); ?>">
 
   <?php mtm_get_block_part( 'mtm-block', 'list-logic' ); ?>
 

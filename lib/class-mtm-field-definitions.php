@@ -2784,7 +2784,7 @@ class Mtm_Block_Field_Definitions {
 					'conditional_logic' => array(
 						array(
 							array(
-								'field' => 'field_5783de5e38892',
+								'field' => 'field_5783de5e38892block',
 								'operator' => '==',
 								'value' => 'Pick From Taxonomy',
 							),
@@ -2813,7 +2813,7 @@ class Mtm_Block_Field_Definitions {
 					'conditional_logic' => array(
 						array(
 							array(
-								'field' => 'field_5783de5e38892',
+								'field' => 'field_5783de5e38892block',
 								'operator' => '==',
 								'value' => 'Pick From Post Type',
 							),

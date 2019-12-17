@@ -1,7 +1,7 @@
 <?php //Tabs
 $rows = get_field( 'mtm_tab_repeater' );
 ?>
-<div="content--inner">
+<div class="content--inner">
 <?php if( $rows ) : ?>
 
 	<div class="mtm-tabs--wrapper mtm-module--tabs">

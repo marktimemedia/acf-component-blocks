@@ -4,7 +4,7 @@
 
 	<?php if( has_post_thumbnail() ) : ?>
 		<section class="mtm-list--image">
-			<?php the_mtm_post_thumbnail( 'medium_large', 'mtm-list--image-single' ); ?>
+			<figure class="mtm-grid--image"><?php the_post_thumbnail( 'medium_large' ); ?></figure>
 		</section>
 	<?php endif; ?>
 

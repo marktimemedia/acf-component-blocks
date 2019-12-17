@@ -45,7 +45,7 @@ if( $scroll_posts ):
 
 					<?php if( false !== get_field('mtm_block_show_page_title') ) : ?>
 
-						<h1 class="page--title"><?php the_title(); ?><?php edit_post_link( '(Edit)', ' • ' ); ?></h1>
+						<h2 class="page--title"><?php the_title(); ?><?php edit_post_link( '(Edit)', ' • ' ); ?></h2>
 
 					<?php endif; ?>
 

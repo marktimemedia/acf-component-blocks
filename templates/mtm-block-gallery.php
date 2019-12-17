@@ -1,5 +1,5 @@
 <?php // Module: Gallery
-$images = get_sub_field('mtm_module_gallery_images');
+$images = get_field('mtm_module_gallery_images');
 $size = 'medium'; // (thumbnail, medium, large, full or custom size)
 ?>
 

@@ -169,6 +169,10 @@
 		margin: 0;
 		padding: 0;
 
+		& > p, a > p { // gutenberg issues
+			display: none;
+		}
+
 		// grid for supported browsers
 		@supports(display: grid) {
 			display: grid;
@@ -294,6 +298,8 @@
 .mtm-tabs--content {
 	display: none;
 	padding: .5em 0;
+	clear: both;
+	overflow: auto;
 
 	&.current {
 		display:inherit;
@@ -321,6 +327,8 @@
 	.mtm-module--cta-subheading{
 		display: inline-block;
 		margin-right: 1em;
+		line-height: 1.4;
+		margin-bottom: 0.5em;
 	}
 
 	.mtm-module--cta-buttons {
