@@ -37,6 +37,14 @@
       }
     }
 
+    .mtm-tabs--content.current {
+      display: none;
+
+      &#tab-1 {
+        display: inherit;
+      }
+    }
+
   .iris-picker {
     	height: auto !important;
     	overflow: hidden;
@@ -71,5 +79,17 @@
 
   figure {
     margin: 0;
+  }
+
+  ul.slides {
+    list-style: none;
+    margin-left: auto;
+    padding: 0;
+    li {
+      display: none;
+      &:first-of-type {
+        display: block;
+      }
+    }
   }
 }

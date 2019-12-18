@@ -18,6 +18,10 @@
     visibility: visible; }
   .editor-styles-wrapper .acf-input .acf-radio-list li input[type="text"] {
     display: inline-block !important; }
+.editor-styles-wrapper .acf-input .mtm-tabs--content.current {
+  display: none; }
+  .editor-styles-wrapper .acf-input .mtm-tabs--content.current#tab-1 {
+    display: inherit; }
 .editor-styles-wrapper .acf-input .iris-picker {
   height: auto !important;
   overflow: hidden;
@@ -40,3 +44,11 @@
   display: none; }
 .editor-styles-wrapper figure {
   margin: 0; }
+.editor-styles-wrapper ul.slides {
+  list-style: none;
+  margin-left: auto;
+  padding: 0; }
+  .editor-styles-wrapper ul.slides li {
+    display: none; }
+    .editor-styles-wrapper ul.slides li:first-of-type {
+      display: block; }

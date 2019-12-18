@@ -4,7 +4,7 @@
 
 	<?php if( get_field( 'mtm_logo_title' ) ): ?>
 
-		<h2 class="mtm-module-title"><?php the_sub_field( 'mtm_logo_title' ); ?></h2>
+		<h2 class="mtm-module-title"><?php the_field( 'mtm_logo_title' ); ?></h2>
 
 	<?php endif;
 
