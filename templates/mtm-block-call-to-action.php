@@ -1,4 +1,7 @@
-<?php // Module: Call To Action ?>
+<?php // Module: Call To Action
+$align = get_field( 'mtm_button_alignment' ) ? : 'default';
+$size = get_field( 'mtm_button_size' ) ? : 'default';
+?>
 <div class="content--inner">
 	<section class="mtm-module--cta">
 		<?php if( get_field( 'mtm_cta_headline' ) ) : ?>
@@ -22,11 +25,11 @@
 
 				$j=1; ?>
 
-				<div class="mtm-module--cta-buttons">
+				<div class="mtm-module--cta-buttons <?php echo $align; ?>">
 
 					<?php while( have_rows( 'mtm_cta_button_repeater' ) ): the_row(); // Loop through each item ?>
 
-						<a class="button mtm-button cta-button cta-<?php echo $j++; ?>" href="<?php echo esc_url( mtm_output_url_override_sub( 'mtm_cta_button_link' ) ); ?>"><?php the_sub_field( 'mtm_cta_button_label' ); // sub field value goes here ?></a>
+						<a class="button mtm-button cta-button cta-<?php echo $j++ . ' ' . $size; ?>" href="<?php echo esc_url( mtm_output_url_override_sub( 'mtm_cta_button_link' ) ); ?>"><?php the_sub_field( 'mtm_cta_button_label' ); // sub field value goes here ?></a>
 
 					<?php endwhile; ?>
 

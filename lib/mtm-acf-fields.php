@@ -418,4 +418,94 @@ acf_add_local_field_group(array (
 	'description' => '',
 ));
 
+acf_add_local_field_group(array(
+	'key' => 'group_5e25c33217992',
+	'title' => 'Button Options',
+	'fields' => array(
+		array(
+			'key' => 'field_5e25c65cb3f33',
+			'label' => 'Button Size',
+			'name' => 'mtm_button_size',
+			'type' => 'radio',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '50',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'default' => 'Default',
+				'button-xs' => 'Small',
+				'button-l' => 'Large',
+				'button-xl' => 'X-Large',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+		array(
+			'key' => 'field_5e25c6c2b3f34',
+			'label' => 'Button Alignment',
+			'name' => 'mtm_button_alignment',
+			'type' => 'radio',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '50',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'default' => 'Default',
+				'alignleft' => 'Left',
+				'aligncenter' => 'Center',
+				'alignright' => 'Right',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/mtm-block-buttons',
+			),
+		),
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/mtm-block-call-to-action',
+			),
+		),
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/mtm-block-call-to-action',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 endif;

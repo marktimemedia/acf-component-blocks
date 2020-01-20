@@ -42,13 +42,9 @@ if( 'Pick From Taxonomy' == get_field( 'mtm_list_archive_select' ) ) : // Taxono
 
 		endif;
 
-		if( _get_field( 'mtm_show_view_all_link' ) ) :
+		$viewtext = _get_field( 'mtm_view_all_link_text' ) ? : 'View All';
 
-			$viewtext = _get_field( 'mtm_view_all_link_text' ) ? _get_field( 'mtm_view_all_link_text' ) : 'View All'; ?>
-
-			<a class="mtm-view-all-link" href="<?php echo get_term_link( $term, $taxonomy ); ?>"><?php _e( $viewtext, 'mtm' ); ?></a>
-
-		<?php else: ?>
+		if( _get_field( 'mtm_show_view_all_link' ) ) : ?>
 
 			<a class="mtm-view-all-link" href="<?php echo get_term_link( $term, $taxonomy ); ?>"><?php _e( $viewtext, 'mtm' ); ?></a>
 
@@ -85,9 +81,9 @@ if( 'Pick From Taxonomy' == get_field( 'mtm_list_archive_select' ) ) : // Taxono
 
 		endif;
 
-		if( _get_field( 'mtm_show_view_all_link' ) ) :
+		$viewtext = _get_field( 'mtm_view_all_link_text' ) ? : 'View All';
 
-			$viewtext = _get_field( 'mtm_view_all_link_text' ) ? _get_field( 'mtm_view_all_link_text' ) : 'View All';
+		if( _get_field( 'mtm_show_view_all_link' ) ) :
 
 			if( 'post' == $posttype  ) : // Posts ?>
 

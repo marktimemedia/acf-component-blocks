@@ -48,6 +48,12 @@
 .mtm-per-row-12 {
 	@include pinkmagic( $rowitems: 12, $padside: 3% );
 }
+.alignright,
+.alignleft,
+.aligncenter {
+    display: block;
+    max-width: 100%;
+}
 
 .content--inner {
 		margin: 0 auto;
@@ -103,6 +109,30 @@
 		}
 	}
 
+// Buttons
+	.button-xs {
+		font-size: .75em !important;
+		line-height: .75em !important;
+		padding: .4em .75em !important;
+	}
+
+	.button-lg {
+		font-size: 1.3em !important;
+		line-height: 1em !important;
+		padding: .5em, 1em !important;
+	}
+
+	.button-med {
+		font-size: 1em !important;
+		line-height: 1em !important;
+		padding: .375em, .75em !important;
+	}
+
+	.button-xl {
+		font-size: 1.6em !important;
+		line-height: 1em !important;
+		padding: .875rem 1.75rem !important;
+	}
 
 /* Module Rules */
 
@@ -155,6 +185,7 @@
 	.mtm_module_call_to_action {
 		padding: 1em;
 		background: #f2f2f2;
+		overflow: auto;
 	}
 
 	.mtm-module--content-secondary-image {
@@ -313,37 +344,8 @@
 }
 
 
-@media only screen and ( min-width:$med-bp ) {
-
-	.mtm-tabs--title-container {
-		display: block;
-	}
-		.mtm-tabs--title {
-			padding: .3em 0;
-			margin-right:1em;
-			display:inline-block;
-		}
-		.mtm-tabs--title-accordion {
-			display: none;
-		}
-		.mtm-tabs--content {
-			border-top: 1px solid #eee;
-		}
-
-	.mtm-module--cta-subheading{
-		display: inline-block;
-		margin-right: 1em;
-		line-height: 1.4;
-		margin-bottom: 0.5em;
-	}
-
-	.mtm-module--cta-buttons {
-		display: inline-block;
-	}
-}
 
 /* MEDIA QUERIES */
-
 
 @media only screen and ( min-width: $sm-bp ) and ( max-width: $med-bp ) {
 
@@ -390,6 +392,30 @@
 
 }
 
+// SMALL
+@media only screen and (min-width: $sm-bp) {
+	.alignright {
+			float: right !important;
+			margin-left: 1rem !important;
+			//max-width: 50%;
+	}
+
+	.alignleft {
+			float: left !important;
+			margin-right: 1rem !important;
+			//max-width: 50%;
+	}
+
+	.aligncenter {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			clear: both;
+			text-align: center;
+	}
+}
+
+// MEDIUM
 @media only screen and ( min-width: $med-bp ) {
 	.mtm-component .content--page {
 		padding: $big-pad;
@@ -429,9 +455,34 @@
 		}
 	}
 
+	.mtm-tabs--title-container {
+		display: block;
+	}
+		.mtm-tabs--title {
+			padding: .3em 0;
+			margin-right:1em;
+			display:inline-block;
+		}
+		.mtm-tabs--title-accordion {
+			display: none;
+		}
+		.mtm-tabs--content {
+			border-top: 1px solid #eee;
+		}
+
+	.mtm-module--cta-subheading{
+		display: inline-block;
+		margin-right: 1em;
+		line-height: 1.4;
+		margin-bottom: 0.5em;
+	}
+
+	.mtm-module--cta-buttons {
+		display: inline-block;
+	}
 }
 
-
+// LARGE
 @media only screen and ( min-width: $lg-bp ) {
 
 	.mtm-list--image {
