@@ -10,9 +10,7 @@ $jump = get_field('mtm_enable_jump_button') ? true : false; ?>
 	<section class="content--page">
 
 		<?php if( get_field('mtm_block_show_page_title') ) : ?>
-
 			<h1 class="page--title"><?php the_title(); ?><?php edit_post_link( '(Edit)', ' • ' ); ?></h1>
-
 		<?php endif; ?>
 
 		<?php while ( have_posts() ) : the_post();
@@ -20,7 +18,6 @@ $jump = get_field('mtm_enable_jump_button') ? true : false; ?>
 		endwhile; ?>
 
 	</section>
-
 </section>
 
 <?php // Single Scroll Select (ACF Relationship Field)
@@ -36,25 +33,19 @@ if( $scroll_posts ):
 		setup_postdata( $post ); ?>
 
 		<section id="<?php echo $post->post_name; ?>" class= "mtm-component mtm-section-<?php echo $j++; ?>">
-
 			<section class="content--<?php echo $post->post_name; ?>">
-
 				<div class="content--page">
 
 					<?php if( $jump ) { mtm_get_block_part('mtm-block', 'jump-button'); } ?>
 
 					<?php if( false !== get_field('mtm_block_show_page_title') ) : ?>
-
 						<h2 class="page--title"><?php the_title(); ?><?php edit_post_link( '(Edit)', ' • ' ); ?></h2>
-
 					<?php endif; ?>
 
 					<?php the_content(); ?>
 
 				</div>
-
 			</section>
-
 		</section>
 
 	<?php endforeach;

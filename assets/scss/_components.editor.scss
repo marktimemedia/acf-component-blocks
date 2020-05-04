@@ -38,10 +38,10 @@
     }
 
     .mtm-tabs--content.current {
-      display: none;
+      display: none !important;
 
       &#tab-1 {
-        display: inherit;
+        display: inherit !important;
       }
     }
 

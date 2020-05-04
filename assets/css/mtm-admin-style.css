@@ -19,9 +19,9 @@
   .editor-styles-wrapper .acf-input .acf-radio-list li input[type="text"] {
     display: inline-block !important; }
 .editor-styles-wrapper .acf-input .mtm-tabs--content.current {
-  display: none; }
+  display: none !important; }
   .editor-styles-wrapper .acf-input .mtm-tabs--content.current#tab-1 {
-    display: inherit; }
+    display: inherit !important; }
 .editor-styles-wrapper .acf-input .iris-picker {
   height: auto !important;
   overflow: hidden;

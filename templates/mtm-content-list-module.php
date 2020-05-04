@@ -14,7 +14,7 @@ $content_size = '-full'; ?>
 
 		<section class="mtm-list--image">
 			<figure class="post--thumbnail">
-				<?php if( $url ): ?><a href="<?php echo esc_url( $url ) ?>"><?php endif; ?>
+				<?php if( $url ): ?><a aria-hidden="true" tabindex="-1" href="<?php echo esc_url( $url ) ?>"><?php endif; ?>
 					<img src="<?php echo esc_url( $thumb ); ?>" alt="<?php echo esc_html( $alt ); ?>" />
 				<?php if( $url ): ?></a><?php endif; ?>
 			</figure>

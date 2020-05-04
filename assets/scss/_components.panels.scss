@@ -1,73 +1,6 @@
-/* Some General Resets */
-
-*, *:before, *:after {
-	box-sizing: border-box;
-}
-
 /* General Panel Rules */
-.mtm-per-row-2 {
-	@include pinkmagic( $rowitems: 2, $padside: 4% );
-}
-
-.mtm-per-row-3 {
-	@include pinkmagic( $rowitems: 3, $padside: 4% );
-}
-
-.mtm-per-row-4 {
-	@include pinkmagic( $rowitems: 4, $padside: 4% );
-}
-
-.mtm-per-row-5 {
-	@include pinkmagic( $rowitems: 5, $padside: 4% );
-}
-
-.mtm-per-row-6 {
-	@include pinkmagic( $rowitems: 6, $padside: 4% );
-}
-
-.mtm-per-row-7 {
-	@include pinkmagic( $rowitems: 7, $padside: 3% );
-}
-
-.mtm-per-row-8 {
-	@include pinkmagic( $rowitems: 8, $padside: 3% );
-}
-
-.mtm-per-row-9 {
-	@include pinkmagic( $rowitems: 9, $padside: 3% );
-}
-
-.mtm-per-row-10 {
-	@include pinkmagic( $rowitems: 10, $padside: 3% );
-}
-
-.mtm-per-row-11 {
-	@include pinkmagic( $rowitems: 11, $padside: 3% );
-}
-
-.mtm-per-row-12 {
-	@include pinkmagic( $rowitems: 12, $padside: 3% );
-}
-.alignright,
-.alignleft,
-.aligncenter {
-    display: block;
-    max-width: 100%;
-}
-
-.content--inner {
-		margin: 0 auto;
-  }
-
-  .alignfull, .alignwide {
-		.content--inner {
-	    padding-left: 2rem; // for a boxed width background with no sidebar
-	    padding-right: 2rem; // for a boxed width background with no sidebar
-	  }
-	}
 
 .mtm-component {
-	border-bottom: 1px solid #eee;
 	margin-top: -2rem;
 	padding-top: 2rem;
 	position: relative;
@@ -89,7 +22,6 @@
 
 	.mtm-component--home {
 		background-size: cover;
-		border-top: 1px solid #eee;
 		margin-top: 0;
 		padding-top: 0;
 		text-align: center;
@@ -109,38 +41,18 @@
 		}
 	}
 
-// Buttons
-	.button-xs {
-		font-size: .75em !important;
-		line-height: .75em !important;
-		padding: .4em .75em !important;
-	}
 
-	.button-lg {
-		font-size: 1.3em !important;
-		line-height: 1em !important;
-		padding: .5em, 1em !important;
-	}
-
-	.button-med {
-		font-size: 1em !important;
-		line-height: 1em !important;
-		padding: .375em, .75em !important;
-	}
-
-	.button-xl {
-		font-size: 1.6em !important;
-		line-height: 1em !important;
-		padding: .875rem 1.75rem !important;
-	}
 
 /* Module Rules */
 
 .mtm-module {
-	padding-bottom: 1em;
-	padding-top: 1em;
+	padding-bottom: $sm-pad;
+	padding-top: $sm-pad;
 	overflow: auto; // to account for floats inside the modules
 }
+		.has-no-background-color .mtm-module-title {
+			margin-top: 1em;
+		}
 
 		.mtm-module--hero-title {
 			margin: .75em auto;
@@ -150,6 +62,7 @@
 			margin-bottom: .75em;
 		}
 
+// Hero Rules
 	.mtm-hero-image, .wp-block-cover  {
 		padding: 2em;
 		background-size:cover;
@@ -165,45 +78,69 @@
 		background-size:cover;
 		background-position: center center;
 		text-align: center;
+
+		& > p, a > p { // gutenberg issues
+			display: none;
+		}
 	}
 		.mtm-module--slider-link {
 			display: block;
 			padding: 2em;
 		}
 
+		.mtm-module--slider-content {
+			padding: 0 2em;
+		}
+
+		.flex-control-nav {
+			z-index: 2;
+		}
+// Logo Rules
 .mtm_module_logo_showcase {
-	p {
-		display: inline;
-		margin-right: -.6em;
-	}
+
 }
 	.mtm-logo-grid {
 		vertical-align: middle;
 		text-align: center;
 	}
 
-	.mtm_module_call_to_action {
-		padding: 1em;
-		background: #f2f2f2;
-		overflow: auto;
-	}
+	// Single Content
+		.mtm_module_single_content_area {
+			.mtm-module--content-heading, .mtm-module--content-primary {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: $max;
+			}
+		}
 
+// Content Callout
 	.mtm-module--content-secondary-image {
-		padding: 1em;
+		padding: $sm-pad;
 
 		.mtm-module--content-secondary-wrapper {
 			background-color: rgba(0,0,0,.5);
 			color: #fff;
-			padding: 1em;
+			padding: $sm-pad;
 		}
 	}
 
+	// CTA
+		.mtm_module_call_to_action {
+			padding: $sm-pad;
+			background: #eee;
+			overflow: auto;
+
+			.alignright, .alignleft, .aligncenter {
+				margin-bottom: 0;
+			}
+		}
+
+// Gallery
 	.mtm-module--gallery {
 		display: flex;
 		flex-flow: row wrap;
-
 		list-style: none;
-		margin: 0;
+		margin: 1em 0;
 		padding: 0;
 
 		& > p, a > p { // gutenberg issues
@@ -281,14 +218,19 @@
 /* Button Rules */
 .mtm-home-buttons {
 	margin-bottom: 1em;
-	p {
-		display: inline-block;
+
+	&.alignleft {
+		margin-left: -.5em;
+	}
+
+	&.alignright {
+		margin-right: -.5em;
 	}
 }
 
 .button.mtm-button {
 	display:inline-block;
-	margin-bottom: .5em;
+	margin: .5em;
 }
 
 .post-edit-link {
@@ -299,7 +241,6 @@
 
 .mtm-list--single {
 	margin: 1em 0;
-	border-bottom: 1px solid rgba(150,150,150, 0.3);
 }
 
 	.mtm-list--image {
@@ -313,35 +254,61 @@
 
 /* Tab Rules */
 
-.mtm-tabs--title-container {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-	.mtm-tabs--title {
-		cursor: pointer;
-		padding: .2em 0;
+.mtm-tabs--wrapper {
+	border-bottom: 1px solid #eee;
+	clear: both;
+	margin: 1em 0;
+
+	.mtm-tabs--title-container {
+		display: none;
+		list-style: none; // for old tabs
+		margin: 0;
+		padding: 0;
+	}
+		button.mtm-tabs--title, .mtm-tabs--title {
+			background-color: transparent;
+			border: 0;
+			color: #aaa;
+			cursor: pointer; // for old tabs
+			padding: .2em 0;
+
+			&:hover, &:focus {
+				background-color: transparent;
+				color: #000;
+			}
+
+			&.current {
+				color: #000;
+				font-weight: bold;
+			}
+		}
+
+		button.mtm-tabs--title-accordion, .mtm-tabs--title-accordion {
+			background-color: transparent;
+			border: 0;
+			border-top: 1px solid #eee;
+			color: #aaa;
+			display: block;
+			width: 100%;
+
+			&:hover, &:focus {
+				background-color: transparent;
+				color: #000;
+			}
+		}
+
+	.mtm-tabs--content {
+		clear: both;
+		display: none;
+		overflow: auto;
+		padding: .5em 0;
 
 		&.current {
-			font-weight: bold;
+			display:inherit;
 		}
 	}
-
-	.mtm-tabs--title-accordion {
-		border-top: 1px solid #eee;
-	}
-
-.mtm-tabs--content {
-	display: none;
-	padding: .5em 0;
-	clear: both;
-	overflow: auto;
-
-	&.current {
-		display:inherit;
-	}
 }
+
 
 
 
@@ -394,38 +361,13 @@
 
 // SMALL
 @media only screen and (min-width: $sm-bp) {
-	.alignright {
-			float: right !important;
-			margin-left: 1rem !important;
-			//max-width: 50%;
-	}
 
-	.alignleft {
-			float: left !important;
-			margin-right: 1rem !important;
-			//max-width: 50%;
-	}
-
-	.aligncenter {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			clear: both;
-			text-align: center;
-	}
 }
 
 // MEDIUM
 @media only screen and ( min-width: $med-bp ) {
 	.mtm-component .content--page {
 		padding: $big-pad;
-	}
-
-	.alignfull, .alignwide {
-		.content--inner {
-	    padding-left: $big-pad; // for a boxed width background with no sidebar
-	    padding-right: $big-pad; // for a boxed width background with no sidebar
-	  }
 	}
 
 	.mtm-home-sidebar--widget {
@@ -455,20 +397,29 @@
 		}
 	}
 
-	.mtm-tabs--title-container {
-		display: block;
+	.mtm-tabs--wrapper {
+		border-bottom-width: 0;
+
+		.mtm-tabs--title-container {
+			display: block;
+		}
+			button.mtm-tabs--title, .mtm-tabs--title {
+				padding: .5em 0;
+				margin-right:1em;
+				display:inline-block;
+			}
+			button.mtm-tabs--title-accordion, .mtm-tabs--title-accordion {
+				display: none;
+			}
+			.mtm-tabs--content {
+				border-top: 1px solid #eee;
+			}
 	}
-		.mtm-tabs--title {
-			padding: .3em 0;
-			margin-right:1em;
-			display:inline-block;
-		}
-		.mtm-tabs--title-accordion {
-			display: none;
-		}
-		.mtm-tabs--content {
-			border-top: 1px solid #eee;
-		}
+
+	.mtm_module_call_to_action {
+		padding-top: 2em;
+		padding-bottom: 2em;
+	}
 
 	.mtm-module--cta-subheading{
 		display: inline-block;
@@ -515,5 +466,4 @@
 		@include pinkgrid( $colspan: 8 );
 		@include pinkrow( $rowitems: 2 );
 	}
-
 }

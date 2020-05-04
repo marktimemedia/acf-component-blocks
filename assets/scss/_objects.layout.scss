@@ -1,0 +1,135 @@
+/* Some General Resets */
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+/* General Panel Rules */
+.mtm-per-row-2 {
+	@include pinkmagic( $rowitems: 2, $padside: 4% );
+}
+
+.mtm-per-row-3 {
+	@include pinkmagic( $rowitems: 3, $padside: 4% );
+}
+
+.mtm-per-row-4 {
+	@include pinkmagic( $rowitems: 4, $padside: 4% );
+}
+
+.mtm-per-row-5 {
+	@include pinkmagic( $rowitems: 5, $padside: 4% );
+}
+
+.mtm-per-row-6 {
+	@include pinkmagic( $rowitems: 6, $padside: 4% );
+}
+
+.mtm-per-row-7 {
+	@include pinkmagic( $rowitems: 7, $padside: 3% );
+}
+
+.mtm-per-row-8 {
+	@include pinkmagic( $rowitems: 8, $padside: 3% );
+}
+
+.mtm-per-row-9 {
+	@include pinkmagic( $rowitems: 9, $padside: 3% );
+}
+
+.mtm-per-row-10 {
+	@include pinkmagic( $rowitems: 10, $padside: 3% );
+}
+
+.mtm-per-row-11 {
+	@include pinkmagic( $rowitems: 11, $padside: 3% );
+}
+
+.mtm-per-row-12 {
+	@include pinkmagic( $rowitems: 12, $padside: 3% );
+}
+
+/* Layout General */
+.alignright,
+.alignleft,
+.aligncenter {
+    display: block;
+    max-width: 100%;
+}
+
+.content--inner {
+		margin: 0 auto;
+  }
+
+  .alignfull, .alignwide {
+		.content--inner {
+	    padding-left: 2rem; // for a boxed width background with no sidebar
+	    padding-right: 2rem; // for a boxed width background with no sidebar
+	  }
+	}
+
+/* Buttons General */
+		.button.button-xs {
+			font-size: .75em !important;
+			line-height: .75em !important;
+			padding: .4em .75em !important;
+		}
+
+		.button.button-sm {
+			font-size: .9em !important;
+			line-height: .9em !important;
+			padding: .375em .75em !important;
+		}
+
+		.button.button-med {
+			font-size: 1em !important;
+			line-height: 1em !important;
+			padding: .375em, .75em !important;
+		}
+
+		.button.button-lg {
+			font-size: 1.4em !important;
+			line-height: 1em !important;
+			padding: .5em, 1em !important;
+		}
+
+		.button.button-xl {
+			font-size: 1.6em !important;
+			line-height: 1em !important;
+			padding: .875em 1.75em !important;
+		}
+
+
+// SMALL
+@media only screen and (min-width: $sm-bp) {
+	.alignright {
+			float: right !important;
+			margin-left: 1rem !important;
+			//max-width: 50%;
+	}
+
+	.alignleft {
+			float: left !important;
+			margin-right: 1rem !important;
+			//max-width: 50%;
+	}
+
+	.aligncenter {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			clear: both;
+			text-align: center;
+	}
+}
+
+// Medium
+@media only screen and ( min-width: $med-bp ) {
+
+	.alignfull, .alignwide {
+		.content--inner {
+	    padding-left: $big-pad; // for a boxed width background with no sidebar
+	    padding-right: $big-pad; // for a boxed width background with no sidebar
+	  }
+	}
+}

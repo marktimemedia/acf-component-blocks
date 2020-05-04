@@ -332,7 +332,7 @@ acf_add_local_field_group(array(
 	'title' => 'Custom Block Settings',
 	'fields' => array(
 		array(
-			'key' => 'field_5b3f7580fae80',
+			'key' => 'field_5b3f7580fae80BLOCK',
 			'label' => 'Include Stylesheets?',
 			'name' => 'mtm_block_enqueue_stylesheets',
 			'type' => 'true_false',
@@ -437,8 +437,8 @@ acf_add_local_field_group(array(
 			),
 			'choices' => array(
 				'default' => 'Default',
-				'button-xs' => 'Small',
-				'button-l' => 'Large',
+				'button-sm' => 'Small',
+				'button-lg' => 'Large',
 				'button-xl' => 'X-Large',
 			),
 			'allow_null' => 0,
@@ -481,13 +481,6 @@ acf_add_local_field_group(array(
 				'param' => 'block',
 				'operator' => '==',
 				'value' => 'acf/mtm-block-buttons',
-			),
-		),
-		array(
-			array(
-				'param' => 'block',
-				'operator' => '==',
-				'value' => 'acf/mtm-block-call-to-action',
 			),
 		),
 		array(

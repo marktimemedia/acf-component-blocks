@@ -46,7 +46,7 @@
 *	$before:		Alternating row layouts: elements before this row 		Defaults to 0
 *	$after:			Alternating row layouts: elements after this row 		Defaults to 0
 */
-/* 06. COMPONENTS */
+/* 03. OBJECTS */
 /* Some General Resets */
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -339,6 +339,7 @@
         padding-right: 0;
         width: 5.5833333333%; } }
 
+/* Layout General */
 .alignright,
 .alignleft,
 .aligncenter {
@@ -352,8 +353,54 @@
   padding-left: 2rem;
   padding-right: 2rem; }
 
+/* Buttons General */
+.button.button-xs {
+  font-size: .75em !important;
+  line-height: .75em !important;
+  padding: .4em .75em !important; }
+
+.button.button-sm {
+  font-size: .9em !important;
+  line-height: .9em !important;
+  padding: .375em .75em !important; }
+
+.button.button-med {
+  font-size: 1em !important;
+  line-height: 1em !important;
+  padding: .375em, .75em !important; }
+
+.button.button-lg {
+  font-size: 1.4em !important;
+  line-height: 1em !important;
+  padding: .5em, 1em !important; }
+
+.button.button-xl {
+  font-size: 1.6em !important;
+  line-height: 1em !important;
+  padding: .875em 1.75em !important; }
+
+@media only screen and (min-width: 30em) {
+  .alignright {
+    float: right !important;
+    margin-left: 1rem !important; }
+
+  .alignleft {
+    float: left !important;
+    margin-right: 1rem !important; }
+
+  .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+    text-align: center; } }
+@media only screen and (min-width: 45em) {
+  .alignfull .content--inner, .alignwide .content--inner {
+    padding-left: 3rem;
+    padding-right: 3rem; } }
+/* 06. COMPONENTS */
+/* General Panel Rules */
 .mtm-component {
-  border-bottom: 1px solid #eee;
   margin-top: -2rem;
   padding-top: 2rem;
   position: relative; }
@@ -369,7 +416,6 @@
 
 .mtm-component--home {
   background-size: cover;
-  border-top: 1px solid #eee;
   margin-top: 0;
   padding-top: 0;
   text-align: center; }
@@ -383,31 +429,14 @@
   .mtm-component--term-list a {
     padding-right: .5em; }
 
-.button-xs {
-  font-size: .75em !important;
-  line-height: .75em !important;
-  padding: .4em .75em !important; }
-
-.button-lg {
-  font-size: 1.3em !important;
-  line-height: 1em !important;
-  padding: .5em, 1em !important; }
-
-.button-med {
-  font-size: 1em !important;
-  line-height: 1em !important;
-  padding: .375em, .75em !important; }
-
-.button-xl {
-  font-size: 1.6em !important;
-  line-height: 1em !important;
-  padding: .875rem 1.75rem !important; }
-
 /* Module Rules */
 .mtm-module {
-  padding-bottom: 1em;
-  padding-top: 1em;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   overflow: auto; }
+
+.has-no-background-color .mtm-module-title {
+  margin-top: 1em; }
 
 .mtm-module--hero-title {
   margin: .75em auto; }
@@ -428,36 +457,47 @@
   background-size: cover;
   background-position: center center;
   text-align: center; }
+  .mtm-module--slider-slide > p, .mtm-module--slider-slide a > p {
+    display: none; }
 
 .mtm-module--slider-link {
   display: block;
   padding: 2em; }
 
-.mtm_module_logo_showcase p {
-  display: inline;
-  margin-right: -.6em; }
+.mtm-module--slider-content {
+  padding: 0 2em; }
+
+.flex-control-nav {
+  z-index: 2; }
 
 .mtm-logo-grid {
   vertical-align: middle;
   text-align: center; }
 
-.mtm_module_call_to_action {
-  padding: 1em;
-  background: #f2f2f2;
-  overflow: auto; }
+.mtm_module_single_content_area .mtm-module--content-heading, .mtm_module_single_content_area .mtm-module--content-primary {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80em; }
 
 .mtm-module--content-secondary-image {
-  padding: 1em; }
+  padding: 1rem; }
   .mtm-module--content-secondary-image .mtm-module--content-secondary-wrapper {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-    padding: 1em; }
+    padding: 1rem; }
+
+.mtm_module_call_to_action {
+  padding: 1rem;
+  background: #eee;
+  overflow: auto; }
+  .mtm_module_call_to_action .alignright, .mtm_module_call_to_action .alignleft, .mtm_module_call_to_action .aligncenter {
+    margin-bottom: 0; }
 
 .mtm-module--gallery {
   display: flex;
   flex-flow: row wrap;
   list-style: none;
-  margin: 0;
+  margin: 1em 0;
   padding: 0; }
   .mtm-module--gallery > p, .mtm-module--gallery a > p {
     display: none; }
@@ -515,20 +555,21 @@
 /* Button Rules */
 .mtm-home-buttons {
   margin-bottom: 1em; }
-  .mtm-home-buttons p {
-    display: inline-block; }
+  .mtm-home-buttons.alignleft {
+    margin-left: -.5em; }
+  .mtm-home-buttons.alignright {
+    margin-right: -.5em; }
 
 .button.mtm-button {
   display: inline-block;
-  margin-bottom: .5em; }
+  margin: .5em; }
 
 .post-edit-link {
   font-size: .7em; }
 
 /* List Rules */
 .mtm-list--single {
-  margin: 1em 0;
-  border-bottom: 1px solid rgba(150, 150, 150, 0.3); }
+  margin: 1em 0; }
 
 .mtm-list--image {
   width: 100%; }
@@ -537,28 +578,44 @@
   width: 100%; }
 
 /* Tab Rules */
-.mtm-tabs--title-container {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-.mtm-tabs--title {
-  cursor: pointer;
-  padding: .2em 0; }
-  .mtm-tabs--title.current {
-    font-weight: bold; }
-
-.mtm-tabs--title-accordion {
-  border-top: 1px solid #eee; }
-
-.mtm-tabs--content {
-  display: none;
-  padding: .5em 0;
+.mtm-tabs--wrapper {
+  border-bottom: 1px solid #eee;
   clear: both;
-  overflow: auto; }
-  .mtm-tabs--content.current {
-    display: inherit; }
+  margin: 1em 0; }
+  .mtm-tabs--wrapper .mtm-tabs--title-container {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .mtm-tabs--wrapper button.mtm-tabs--title, .mtm-tabs--wrapper .mtm-tabs--title {
+    background-color: transparent;
+    border: 0;
+    color: #aaa;
+    cursor: pointer;
+    padding: .2em 0; }
+    .mtm-tabs--wrapper button.mtm-tabs--title:hover, .mtm-tabs--wrapper button.mtm-tabs--title:focus, .mtm-tabs--wrapper .mtm-tabs--title:hover, .mtm-tabs--wrapper .mtm-tabs--title:focus {
+      background-color: transparent;
+      color: #000; }
+    .mtm-tabs--wrapper button.mtm-tabs--title.current, .mtm-tabs--wrapper .mtm-tabs--title.current {
+      color: #000;
+      font-weight: bold; }
+  .mtm-tabs--wrapper button.mtm-tabs--title-accordion, .mtm-tabs--wrapper .mtm-tabs--title-accordion {
+    background-color: transparent;
+    border: 0;
+    border-top: 1px solid #eee;
+    color: #aaa;
+    display: block;
+    width: 100%; }
+    .mtm-tabs--wrapper button.mtm-tabs--title-accordion:hover, .mtm-tabs--wrapper button.mtm-tabs--title-accordion:focus, .mtm-tabs--wrapper .mtm-tabs--title-accordion:hover, .mtm-tabs--wrapper .mtm-tabs--title-accordion:focus {
+      background-color: transparent;
+      color: #000; }
+  .mtm-tabs--wrapper .mtm-tabs--content {
+    clear: both;
+    display: none;
+    overflow: auto;
+    padding: .5em 0; }
+    .mtm-tabs--wrapper .mtm-tabs--content.current {
+      display: inherit; }
 
 /* MEDIA QUERIES */
 @media only screen and (min-width: 30em) and (max-width: 45em) {
@@ -635,28 +692,9 @@
       padding-left: 0; }
     .mtm-home-featured--story:nth-of-type(2n+2) {
       padding-right: 0; } }
-@media only screen and (min-width: 30em) {
-  .alignright {
-    float: right !important;
-    margin-left: 1rem !important; }
-
-  .alignleft {
-    float: left !important;
-    margin-right: 1rem !important; }
-
-  .aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-    text-align: center; } }
 @media only screen and (min-width: 45em) {
   .mtm-component .content--page {
     padding: 3rem; }
-
-  .alignfull .content--inner, .alignwide .content--inner {
-    padding-left: 3rem;
-    padding-right: 3rem; }
 
   .mtm-home-sidebar--widget {
     display: block; }
@@ -695,19 +733,22 @@
     .mtm_module_content_callout .mtm-module--content-secondary:nth-of-type(2n+2) {
       padding-right: 0; }
 
-  .mtm-tabs--title-container {
-    display: block; }
+  .mtm-tabs--wrapper {
+    border-bottom-width: 0; }
+    .mtm-tabs--wrapper .mtm-tabs--title-container {
+      display: block; }
+    .mtm-tabs--wrapper button.mtm-tabs--title, .mtm-tabs--wrapper .mtm-tabs--title {
+      padding: .5em 0;
+      margin-right: 1em;
+      display: inline-block; }
+    .mtm-tabs--wrapper button.mtm-tabs--title-accordion, .mtm-tabs--wrapper .mtm-tabs--title-accordion {
+      display: none; }
+    .mtm-tabs--wrapper .mtm-tabs--content {
+      border-top: 1px solid #eee; }
 
-  .mtm-tabs--title {
-    padding: .3em 0;
-    margin-right: 1em;
-    display: inline-block; }
-
-  .mtm-tabs--title-accordion {
-    display: none; }
-
-  .mtm-tabs--content {
-    border-top: 1px solid #eee; }
+  .mtm_module_call_to_action {
+    padding-top: 2em;
+    padding-bottom: 2em; }
 
   .mtm-module--cta-subheading {
     display: inline-block;

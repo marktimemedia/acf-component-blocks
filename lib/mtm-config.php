@@ -52,7 +52,7 @@ if( !function_exists( 'mtm_plugin_options_page' ) ) {
 
           $option_page = acf_add_options_sub_page(array(
             'page_title'    => __('Page & Block Display Settings', 'mtm'),
-            'menu_title'    => __('Display Settings', 'mym'),
+            'menu_title'    => __('Display Settings', 'mtm'),
             'menu_slug'     => 'page-components-settings',
             'parent_slug'   =>  'options-general.php'
           ));
